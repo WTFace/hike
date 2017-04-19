@@ -1,0 +1,21 @@
+<Page ux:Class="EditHikePage">
+	<JavaScript File="EditHikePage.js"/>
+    <ScrollView>
+        <StackPanel>
+            <Each Items="{hikes}">
+                <Button Text="{name}" Clicked="{chooseHike}"></Button>
+            </Each>
+
+            <Text Value="{name}"/>
+
+            <Text>Location</Text>
+            <TextBox Value="{location}" />
+            <Text>Distance </Text>
+            <TextBox Value="{distance}" />
+            <Text>Rating:</Text>
+            <TextBox Value="{rating}" />
+            <Text>Comments:</Text>
+            <TextBox Value="{comments}" TextWrapping="Wrap"/>
+        </StackPanel>
+    </ScrollView>
+</Page>
