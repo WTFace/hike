@@ -123,5 +123,13 @@ public partial class MainView: Fuse.App
         var temp13 = new global::FuseJS.Bundle();
         var temp14 = new global::FuseJS.FileReaderImpl();
         var temp15 = new global::FuseJS.UserEvents();
+        var temp16 = new global::Fuse.Controls.ClientPanel();
+        var temp17 = new global::Fuse.Controls.PageControl();
+        var temp18 = new global::HomePage();
+        var temp19 = new global::EditHikePage();
+        temp16.Children.Add(temp17);
+        temp17.Children.Add(temp18);
+        temp17.Children.Add(temp19);
+        this.Children.Add(temp16);
     }
 }

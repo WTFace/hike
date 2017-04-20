@@ -1,6 +1,49 @@
 [Uno.Compiler.UxGenerated]
 public partial class MainView: Fuse.App
 {
+    [Uno.Compiler.UxGenerated]
+    public partial class Template: Uno.UX.Template
+    {
+        [Uno.WeakReference] internal readonly MainView __parent;
+        [Uno.WeakReference] internal readonly MainView __parentInstance;
+        public Template(MainView parent, MainView parentInstance): base("home", false)
+        {
+            __parent = parent;
+            __parentInstance = parentInstance;
+        }
+        static Template()
+        {
+        }
+        public override object New()
+        {
+            var __self = new global::HomePage(__parent.router);
+            __self.Name = __selector0;
+            return __self;
+        }
+        static global::Uno.UX.Selector __selector0 = "home";
+    }
+    [Uno.Compiler.UxGenerated]
+    public partial class Template1: Uno.UX.Template
+    {
+        [Uno.WeakReference] internal readonly MainView __parent;
+        [Uno.WeakReference] internal readonly MainView __parentInstance;
+        public Template1(MainView parent, MainView parentInstance): base("editHike", false)
+        {
+            __parent = parent;
+            __parentInstance = parentInstance;
+        }
+        static Template1()
+        {
+        }
+        public override object New()
+        {
+            var __self = new global::EditHikePage(__parent.router);
+            __self.Name = __selector0;
+            return __self;
+        }
+        static global::Uno.UX.Selector __selector0 = "editHike";
+    }
+    internal global::Fuse.Navigation.Router router;
     static MainView()
     {
         global::Uno.UX.Resource.SetGlobalKey(global::Fuse.Animations.Easing.Linear, "Linear");
@@ -123,5 +166,18 @@ public partial class MainView: Fuse.App
         var temp13 = new global::FuseJS.Bundle();
         var temp14 = new global::FuseJS.FileReaderImpl();
         var temp15 = new global::FuseJS.UserEvents();
+        router = new global::Fuse.Navigation.Router();
+        var temp16 = new global::Fuse.Controls.ClientPanel();
+        var temp17 = new global::Fuse.Controls.Navigator();
+        var home = new Template(this, this);
+        var editHike = new Template1(this, this);
+        router.Name = __selector0;
+        temp16.Children.Add(temp17);
+        temp17.DefaultPath = "home";
+        temp17.Templates.Add(home);
+        temp17.Templates.Add(editHike);
+        this.Children.Add(router);
+        this.Children.Add(temp16);
     }
+    static global::Uno.UX.Selector __selector0 = "router";
 }

@@ -218,7 +218,7 @@ public class GeneratedApplication
 : Outracks.Simulator.Application
 {
 public GeneratedApplication()
-: base(new [] {new Uno.Net.IPEndPoint(Uno.Net.IPAddress.Parse("10.10.10.231"), 12124), new Uno.Net.IPEndPoint(Uno.Net.IPAddress.Parse("127.0.0.1"), 12124), new Uno.Net.IPEndPoint(Uno.Net.IPAddress.Parse("192.168.56.1"), 12124)}, "C:\\Fuse\\hikr\\hikr.unoproj", GetBundle, new string[] { })
+: base(new [] {new Uno.Net.IPEndPoint(Uno.Net.IPAddress.Parse("10.10.10.231"), 12124), new Uno.Net.IPEndPoint(Uno.Net.IPAddress.Parse("127.0.0.1"), 12124), new Uno.Net.IPEndPoint(Uno.Net.IPAddress.Parse("192.168.56.1"), 12124)}, "C:\\Fuse\\hike\\hike.unoproj", GetBundle, new string[] { })
 {
 
 							if defined(CPLUSPLUS)
@@ -227,7 +227,7 @@ public GeneratedApplication()
 }
 static Uno.IO.Bundle GetBundle()
 {
-return Uno.IO.Bundle.Get("hikr");
+return Uno.IO.Bundle.Get("hike");
 }
 }
 }
