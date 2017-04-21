@@ -1,4 +1,5 @@
 var Observable = require("FuseJS/Observable");
+var Context = require("Modules/Context");
 
 var hike = this.Parameter;
 var name = hike.map(function(x) { return x.name; });
@@ -7,7 +8,12 @@ var distance = hike.map(function(x) { return x.distance+" km"; });
 var rating = hike.map(function(x) { return x.rating; });
 var comments = hike.map(function(x) { return x.comments; });
 
-function goBack() {
+function save() {
+	Context.updateHike(hike.value.id, name.value, location.value, distance.value, rating.value, comments.value);
+	router.goBack();
+}
+function cancel() {
+	hike.vale = hike.value;
 	router.goBack();
 }
 
@@ -17,6 +23,7 @@ module.exports = {
     distance: distance,
     rating: rating,
     comments: comments,
-    goBack: goBack,
+    save: save,
+    cancel: cancel,
 };
 

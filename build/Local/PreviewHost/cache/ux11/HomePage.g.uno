@@ -13,10 +13,10 @@ public partial class HomePage: Fuse.Controls.Page
             __parentInstance = parentInstance;
         }
         global::Uno.UX.Property<string> __self_Text_inst;
-        internal global::Fuse.Reactive.EventBinding temp_eb2;
+        internal global::Fuse.Reactive.EventBinding temp_eb3;
         global::Uno.UX.NameTable __g_nametable;
         static string[] __g_static_nametable = new string[] {
-            "temp_eb2"
+            "temp_eb3"
         };
         static Template()
         {
@@ -29,11 +29,11 @@ public partial class HomePage: Fuse.Controls.Page
             __g_nametable = new global::Uno.UX.NameTable(__parent.__g_nametable, __g_static_nametable);
             var temp1 = new global::Fuse.Reactive.Data("goToHike");
             var temp2 = new global::Fuse.Reactive.DataBinding(__self_Text_inst, temp, __g_nametable, Fuse.Reactive.BindingMode.Default);
-            var temp_eb2 = new global::Fuse.Reactive.EventBinding(temp1, __g_nametable);
-            global::Fuse.Gestures.Clicked.AddHandler(__self, temp_eb2.OnEvent);
-            __g_nametable.Objects.Add(temp_eb2);
+            var temp_eb3 = new global::Fuse.Reactive.EventBinding(temp1, __g_nametable);
+            global::Fuse.Gestures.Clicked.AddHandler(__self, temp_eb3.OnEvent);
+            __g_nametable.Objects.Add(temp_eb3);
             __self.Bindings.Add(temp2);
-            __self.Bindings.Add(temp_eb2);
+            __self.Bindings.Add(temp_eb3);
             return __self;
         }
         static global::Uno.UX.Selector __selector0 = "Text";
